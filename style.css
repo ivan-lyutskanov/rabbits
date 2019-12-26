@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: 'Chela One', cursive;
+  background: #80c28f;
+}
+
+h1 {
+  text-align: center;
+  font-size: 8rem;
+  margin-bottom: 0;
+  color: #34495e;
+}
+
+h2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #34495e;
+  margin: 0;
+  visibility: hidden;
+  transform: translateY(-5rem);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+h2.show {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 0.7;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 2.2rem;
+  border-radius: 1rem;
+  font-size: 1.4em;
+}
+
+.game {
+  width:600px;
+  height:400px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 48%;
+}
+
+.hole:after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  background: black;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.95;
+  border-top: 8px inset rgba(255,255,255,0.2);
+}
+
+.rabbit {
+  background:url('rabbit.svg') bottom center no-repeat;
+  background-size:60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.rabbit.freeze {
+  pointer-events:none;
+}
+
+.hole.up .rabbit {
+  top:12%;
+}
+
+.btn-container {
+  margin: 8rem 0 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-container > button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: #d35400;
+  font: inherit;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  line-height: normal;
+  overflow: visible;
+  -webkit-user-select: none; /* for button */
+      -moz-user-select: none;
+      -ms-user-select: none;
+  transition: 0.8s;
+}
+
+.btn-container > button:hover {
+    transform: scale(1.05);
+}
+
+.btn-container > button:focus {
+  outline: none;
+}
+
+.btn-container > button.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.btn-container > button.hide {
+  opacity: 0;
+  transform: translateY(5rem);
+  visibility: hidden;
+}
+
+.download-links {
+    display: block;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 3.5rem;
+}
+
+.download-links > a {
+    color: rgba(0,0,0,0.35);
+    text-decoration: none;
+}
+
+.download-links > a.desktop {display: none; }
+
+.download-links > a:nth-child(even){ margin: 0 0.6rem; }
+
+.download-links > a.apple,.download-links > a.android {font-size: 1.2em; }
+
+@media only screen and (min-width : 992px) {
+    .download-links > a.desktop {display: initial; }
+}
