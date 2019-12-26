@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no">
-  <title>Whack A Rabbit!</title>
-  <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="user-scalable=no" />
+    <title>Whack A Rabbit!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Chela+One"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Whack-a-Rabbit!</h1>
+    <h2>Score: <span class="score">0</span></h2>
 
-  <h1>Whack-a-Rabbit!</h1>
-  <h2>Score: <span class="score">0</span></h2>
-
-  <div class="game">
-    <div class="hole hole1">
-      <div class="rabbit"></div>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="rabbit"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="rabbit"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="rabbit"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="rabbit"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="rabbit"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="rabbit"></div>
+      </div>
     </div>
-    <div class="hole hole2">
-      <div class="rabbit"></div>
+
+    <div class="btn-container">
+      <button id="play-btn" onClick="startGame()">Click here to play</button>
     </div>
-    <div class="hole hole3">
-      <div class="rabbit"></div>
+
+    <div class="download-links">
+      <a
+        href="https://www.dropbox.com/s/h3u5m7ckdc3zbfb/Rabbits.app.zip?dl=0"
+        title="Download for MacOS"
+        class="apple desktop"
+      >
+        <i class="fab fa-apple"></i>
+      </a>
+
+      <a
+        href="https://www.dropbox.com/s/i0sxhodwbqudpit/Rabbits-win32.zip?dl=0"
+        title="Download for Windows"
+        class="desktop"
+      >
+        <i class="fab fa-windows"></i>
+      </a>
+
+      <a
+        href="https://www.dropbox.com/s/h83dkl21a019ql8/Rabbits.apk?dl=0"
+        title="Download for Android"
+        class="android"
+      >
+        <i class="fab fa-android"></i>
+      </a>
     </div>
-    <div class="hole hole4">
-      <div class="rabbit"></div>
-    </div>
-    <div class="hole hole5">
-      <div class="rabbit"></div>
-    </div>
-    <div class="hole hole6">
-      <div class="rabbit"></div>
-    </div>
-  </div>
 
-  <div class="btn-container">
-    <button id="play-btn" onClick="startGame()">Click here to play</button>
-  </div>
-
-  <div class="download-links">
-
-    <a href="http://rabbits.lyutskanov.info/Download/Rabbits.app.zip" title="Download for MacOS" class="apple desktop">
-      <i class="fab fa-apple"></i>
-    </a>
-
-    <a href="http://rabbits.lyutskanov.info/Download/Rabbits-win32.zip" title="Download for Windows" class="desktop">
-      <i class="fab fa-windows"></i>
-    </a>
-
-    <a href="http://rabbits.lyutskanov.info/Download/Rabbits.apk" title="Download for Android" class="android">
-      <i class="fab fa-android"></i>
-    </a>
-
-  </div>
-
-
-<script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
